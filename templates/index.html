@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>main KCDF 온라인숍 - 공예정원</title>
+        <meta name = "description" content="main page 작성">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css')}}">
+    </head>
+
+    <body>
+
+        <div id="wrap" style="margin-left: 0px;">
+            <!-- 최상단 메뉴 -->
+            <nav class="header_top_bar">
+                <ul class = "top_member_box">
+                    <li>
+                        <a href="/login">LOGIN</a>
+                        <span class="text_bar"></span>
+                    </li>
+                    <li>
+                        <a href="/joinus">JOIN</a>
+                        <span class="text_bar"></span>
+                    </li>
+                    <li>
+                        <a href="">MYPAGE</a>
+                        <span class="text_bar"></span>
+                    </li>
+                    <li>
+                        <a href="">고객센터</a>
+                        <span class="text_bar"></span>
+                    </li>
+                    <li>
+                        <a href="">개인결재창</a>
+                        <span class="text_bar"></span>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- 로고 -->
+            <div class="toplogo">
+                <a href="">
+                    <img src="{{ url_for('static', filename='image_folder/logo.jpg')}}" title="상단로고" alt="상단로고">
+                </a>
+            </div>
+
+            <div class="header_search_cont">
+                <a class="sub_search_all" href="">작가별</a>
+                <a class="sub_search" href="">소재별</a>
+                <a class="sub_search" href="">가격대별</a>
+
+                <div class="topsearchform" style="margin: 0 auto auto 9.25rem;"> <!--검색폼 시작-->
+                    <form class="SearchTop" name = "SearchTop" id="SearchTop" action="" method="get" novalidate="novalidate">
+                        <fieldset>
+                            <div class="top_search_content">
+                                <input type="text" id="search_form" name="keyword" class="top_search_text">
+                                <input type="image" src="{{ url_for('static', filename='image_folder/watch.png')}}" id="search_icon" class="search_icon_btn" title="검색" value="검색" alt="검색">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <ul class="sub_search">
+                    <li>
+                        <a href="">
+                            <img src="{{ url_for('static', filename='image_folder/dv_icon.jpg')}}" height="24px" alt="배송" title="배송">
+                        </a>
+                    </li>
+                    <li>
+                        <a href=""> 
+                            <img src="{{ url_for('static', filename='image_folder/shopping-bag.png')}}" height="24px" alt="장바구니" title="장바구니">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="{{ url_for('static', filename='image_folder/user_2.png')}}" height="24px" alt="마이페이지" title="마이페이지">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header_category_bar">
+                <div class="all_menu">
+                    <div class="all_cate_list">
+                        <a href="" class="btn_all_cate">
+                            <img src="{{ url_for('static', filename='image_folder/btn_allmenu_open.png')}}" alt="전체카테고리보기" title="전체카테고리보기">전체카테고리
+                        </a>
+                    </div>
+
+                    <ul class = "allmenu_category">
+                        <li>
+                            <a href="">신상품</a>
+                        </li>
+                        <li>
+                            <a href="">베스트</a>
+                        </li>
+                        <li>
+                            <a href="">기업주문</a>
+                        </li>
+                        <li>
+                            <a href="">매장안내</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Top 버튼 -->
+            <button id="go-top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor"
+                class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+                </svg>
+            </button>
+
+            <!-- 메인 배너부터 시작 -->
+            <div class="container">
+                <div class="contents">
+                    <div class="slider_wrap">
+                        <div class="mainbanner_slide">
+                            <div class="mainbanner_slide_item">
+                                <a href="">
+                                    <img src="{{ url_for('static', filename='image_folder/banner1.jpg')}}" alt="메인슬라이드">
+                                </a>
+                            </div>
+                            <div class="mainbanner_slide_item">
+                                <a href="">
+                                    <img src="{{ url_for('static', filename='image_folder/banner2.jpg')}}" alt="메인슬라이드">
+                                </a>
+                            </div>
+                            <div class="mainbanner_slide_item">
+                                <a href="">
+                                    <img src="{{ url_for('static', filename='image_folder/banner3.jpg')}}" alt="메인슬라이드">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Next and previous buttons -->
+                        <div class="prev">❮</div>
+                        <div class="next">❯</div>
+                    </div>                    
+
+                    <div class="recommed_customer_wrap">
+                        <div class="recommend_slider_image">
+                            <div class="recommed_customer_title">
+                                <b>고객님을 위한 추천상품</b>
+                            </div>
+
+                            <div class="recommed_slideimage">
+                                <div class="product-item">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/1000000777_detail_06.jpg')}}" alt="Product 1">
+                                        <div class="product-name">상품 1</div>
+                                        <div class="product-price">가격 1</div>
+                                    </a>
+                                </div>
+                                <div class="product-item">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/1000000777_detail_06.jpg')}}" alt="Product 2">
+                                        <div class="product-name">상품 2</div>
+                                        <div class="product-price">가격 2</div>
+                                    </a>
+                                </div>
+                                <div class="product-item">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/1000000777_detail_06.jpg')}}" alt="Product 3">
+                                        <div class="product-name">상품 3</div>
+                                        <div class="product-price">가격 3</div>
+                                    </a>
+                                </div>
+                                <div class="product-item">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/1000000777_detail_06.jpg')}}" alt="Product 4">
+                                        <div class="product-name">상품 4</div>
+                                        <div class="product-price">가격 4</div>
+                                    </a>
+                                </div>
+                                <div class="product-item">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/1000000777_detail_06.jpg')}}" alt="Product 5">
+                                        <div class="product-name">상품 5</div>
+                                        <div class="product-price">가격 5</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 가운데배너 -->
+                    <div class="banner">
+                        <img src="{{ url_for('static', filename='image_folder/be_2_1.jpg')}}" alt="배너">
+                    </div>
+
+                    <!-- 조회수높은 상품 -->
+                    <div class="view_wrap">
+                        <div class="view_slider_image">
+                            <div class="view_title">
+                                <b>조회수 인기상품</b>
+                            </div>
+
+                            <div class="view_slideimage">
+                                <div class="viewproduct-item">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/1000004124_detail_01.jpg')}}" alt="Product 1">
+                                        <div class="viewproduct-name">상품 1</div>
+                                        <div class="viewproduct-cate">카테고리</div>
+                                    </a>
+                                </div>
+                                <div class="viewproduct-item">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/1000004124_detail_01.jpg')}}" alt="Product 2">
+                                        <div class="viewproduct-name">상품 2</div>
+                                        <div class="viewproduct-price">카테고리</div>
+                                    </a>
+                                </div>
+                                <div class="viewproduct-item">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/1000004124_detail_01.jpg')}}" alt="Product 3">
+                                        <div class="viewproduct-name">상품 3</div>
+                                        <div class="viewproduct-price">카테고리</div>
+                                    </a>
+                                </div>
+                                <div class="viewproduct-item">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/1000004124_detail_01.jpg')}}" alt="Product 4">
+                                        <div class="viewproduct-name">상품 4</div>
+                                        <div class="viewproduct-price">카테고리</div>
+                                    </a>
+                                </div>
+                                <div class="viewproduct-item">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/1000004124_detail_01.jpg')}}" alt="Product 5">
+                                        <div class="viewproduct-name">상품 5</div>
+                                        <div class="viewproduct-price">카테고리</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 카테고리 인기 상품 : 구현 미정 javascript 필요 -->
+                    
+
+                    <!-- 추천상품 경복궁 미니 매트 -->
+                    <div class="event_wrap">
+                        <div class="event_background">
+                            <a href="">
+                                <img src="{{ url_for('static', filename='image_folder/event_bg.jpg')}}" alt="이벤트 배경">
+                            </a>
+                        </div>
+                        <div class="event_box">
+                            <div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 이달의 추천상품 -->
+                    <div class="main_good_month_pick">
+                        <h3>이달의 추천상품</h3>
+
+                        <div style="text-align: center;">
+                            <a href="">
+                                <img src="{{ url_for('static', filename='image_folder/recommentPro1.jpg')}}" alt="추천상품1">
+                            </a>
+                            <a href="">
+                                <img src="{{ url_for('static', filename='image_folder/recommentPro2.jpg')}}" alt="추천상품2">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 신규 추천상품 -->
+                    <div class="main_good_new_pick">
+                        <h3 title="신규 등록 상품">이달의 신규상품</h3>
+                        <div class="good_new_contents">
+                            <ul>
+                                <li class="hover_test">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/newitem1.jpg')}}" alt="신규">
+                                        <div class="newitem-store">스토어명</div>
+                                        <div class="newitem-name">직픔명</div>
+                                    </a>
+                                </li>
+                                <li class="hover_test">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/newitem2.jpg')}}" alt="">
+                                        <div class="newitem-store">스토어명</div>
+                                        <div class="newitem-name">직픔명</div>
+                                    </a>
+                                </li>
+                                <li class="hover_test">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/newitem3.jpg')}}" alt="">
+                                        <div class="newitem-store">스토어명</div>
+                                        <div class="newitem-name">직픔명</div>
+                                    </a>
+                                </li>
+                                <li class="hover_test">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/newitem4.jpg')}}" alt="">
+                                        <div class="newitem-store">스토어명</div>
+                                        <div class="newitem-name">직픔명</div>
+                                    </a>
+                                </li>
+                                <li class="hover_test">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/newitem1.jpg')}}" alt="">
+                                        <div class="newitem-store">스토어명</div>
+                                        <div class="newitem-name">직픔명</div>
+                                    </a>
+                                </li>
+                                <li class="hover_test">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/newitem2.jpg')}}" alt="">
+                                        <div class="newitem-store">스토어명</div>
+                                        <div class="newitem-name">직픔명</div>
+                                    </a>
+                                </li>
+                                <li class="hover_test">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/newitem3.jpg')}}" alt="">
+                                        <div class="newitem-store">스토어명</div>
+                                        <div class="newitem-name">직픔명</div>
+                                    </a>
+                                </li>
+                                <li class="hover_test">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='image_folder/newitem4.jpg')}}" alt="">
+                                        <div class="newitem-store">스토어명</div>
+                                        <div class="newitem-name">직픔명</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 회원가입 유도 -->
+                    <div class="signup_induce_warp">
+                        <h3>회원 가입 혜택</h3>
+                        <div class="signup_image">
+                            <a href="">
+                                <img src="{{ url_for('static', filename='image_folder/test.jpg')}}" alt="회원가입유도">
+                            </a>
+                        </div>
+
+                        <div class="youtube" style="text-align:center; padding-bottom:40px;">
+                            <iframe height="650" src="https://kcdfshop.fassker.net/kcdf.html" frameborder="0" allowfullscreen="" style="width: 1100px; max-width: 100%;" allow="xr-spatial-tracking"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer부분 시작 -->
+            <div class="footer">
+                <div class="foot_list">
+                    <ul>
+                        <li><a href="">회사소개</a></li>
+                        <li><a href="">이용약관</a></li>
+                        <li><a href=""><strong>개인정보처리방침</strong></a></li>
+                        <li><a href="">이용안내</a></li>
+                        <li><a href="">사업자정보확인</a></li>
+                    </ul>
+                </div>
+                
+                    <p class="copyright">copyright (c) <strong>kcdfshop.kr</strong> all rights reserved.</p>
+                </div>
+            </div>
+
+        </div> <!--container-->
+
+        <script src = "{{ url_for('static', filename='/js/mainstyle.js')}}"></script>
+
+    </body>
+
+</html>
